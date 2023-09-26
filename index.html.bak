@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- 
+    - primary meta tags
+  -->
+  <title>Students</title>
+  <meta name="title" content="Grilli - Amazing & Delicious Food">
+  <meta name="description" content="This is a Restaurant html template made by codewithsadee">
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Forum&display=swap" rel="stylesheet">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- 
+    - preload images
+  -->
+  <link rel="preload" as="image" href="./assets/images/hero-slider-1.jpg">
+  <link rel="preload" as="image" href="./assets/images/hero-slider-2.jpg">
+  <link rel="preload" as="image" href="./assets/images/hero-slider-3.jpg">
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body  >
+
+  <!-- 
+    - #PRELOADER
+  -->
+
+  <div class="preload" data-preaload>
+    <div class="circle"></div>
+    <p class="text">Hello</p>
+  </div>
+
+
+<style>
+
+.menu-toggle {
+    position: fixed;
+    top: 60px;
+    right: 60px;
+    cursor: pointer;
+    z-index: 999999;
+	font-size:30px;
+}
+
+.icon {
+    width: 40px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 1.3s ease-in-out;
+}
+
+.icon span {
+    width: 100%;
+    height: 4px;
+    background-color: #333;
+}
+
+.menu {
+  position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    transform: scale(0); /* Initially hidden */
+    transition: transform 1.3s ease-in-out;
+	z-index:999;}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu li {
+    padding: 20px;
+    text-align: center;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+}
+
+.menu-toggle.active .icon {
+    transform: scale(1.3);
+}
+
+.menu.active {
+    transform:scale(1);
+}
+i{
+color:#fff;
+}
+.slider-bg {
+  position: relative;
+}
+
+.slider-bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)); /* Adjust the gradient colors as needed */
+}
+
+.img-cover {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+#logoh1{
+	position:absolute;
+	top:60px;
+	left:140px;
+	z-index:9999;
+	color: hsl(38, 61%, 73%);
+}
+</style>
+    <div class="menu-toggle">
+    <div class="icon" id="icon">
+        <i class="fa fa-bars"></i>
+    </div>
+</div>
+<!-- ... rest of your HTML ... -->
+<nav class="menu">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Community</a></li>
+        </ul>
+    </nav>
+	
+	
+	
+	
+	
+	<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.querySelector(".menu-toggle");
+    const menu = document.querySelector(".menu");
+    const icon = document.getElementById("icon");
+
+    menuToggle.addEventListener("click", function () {
+        menuToggle.classList.toggle("active");
+        menu.classList.toggle("active");
+
+        // Check if the menu is active and update the icon accordingly
+        if (menu.classList.contains("active")) {
+            icon.innerHTML = '<i class="fa fa-times"></i>';
+        } else {
+            icon.innerHTML = '<i class="fa fa-bars"></i>';
+        }
+    });
+});
+</script>
+
+<h1 id="logoh1">Crayonify</h1>
+
+      <!-- 
+        - #HERO
+      -->
+
+      <section class="hero text-center" aria-label="home" id="home" style="height:100vh;">
+
+        <ul class="hero-slider" data-hero-slider>
+
+          <li class="slider-item active" data-hero-slider-item>
+
+            <div class="slider-bg">
+              <img src="img1.jpg" width="1880" height="950" alt="" class="img-cover">
+            </div>
+
+            <p class="body-2 hero-text slider-reveal" style="max-width:600px;">
+             At Crayonify, we believe that every child's creative potential deserves to flourish, regardless of their background. Our initiative is a vibrant tapestry woven with the colours of compassion, creativity, and community. We've set out on a mission to bridge the gap between unused crayons and the eager hands of underprivileged children in Mumbai.
+
+            </p>
+          </li>
+
+          <li class="slider-item" data-hero-slider-item>
+
+            <div class="slider-bg">
+              <img src="img2.jpg" width="1880" height="950" alt="" class="img-cover">
+            </div>
+            <p class="body-2 hero-text slider-reveal" style="max-width:600px;">
+              At Crayonify, we believe that every child's creative potential deserves to flourish, regardless of their background. Our initiative is a vibrant tapestry woven with the colours of compassion, creativity, and community. We've set out on a mission to bridge the gap between unused crayons and the eager hands of underprivileged children in Mumbai.
+
+            </p>
+
+
+          </li>
+
+          <li class="slider-item" data-hero-slider-item>
+
+            <div class="slider-bg">
+              <img src="img3.jpg" width="1880" height="950" alt="" class="img-cover">
+            </div>
+            <p class="body-2 hero-text slider-reveal" style="max-width:600px;">
+             At Crayonify, we believe that every child's creative potential deserves to flourish, regardless of their background. Our initiative is a vibrant tapestry woven with the colours of compassion, creativity, and community. We've set out on a mission to bridge the gap between unused crayons and the eager hands of underprivileged children in Mumbai.
+
+            </p>
+
+
+          </li>
+
+          <li class="slider-item" data-hero-slider-item>
+
+            <div class="slider-bg">
+              <img src="img4.jpg" width="1880" height="950" alt="" class="img-cover">
+            </div>
+            <p class="body-2 hero-text slider-reveal" style="max-width:600px;">
+              At Crayonify, we believe that every child's creative potential deserves to flourish, regardless of their background. Our initiative is a vibrant tapestry woven with the colours of compassion, creativity, and community. We've set out on a mission to bridge the gap between unused crayons and the eager hands of underprivileged children in Mumbai.
+
+            </p>
+
+
+          </li>
+
+        </ul>
+
+        <button class="slider-btn prev" aria-label="slide to previous" data-prev-btn>
+          <ion-icon name="chevron-back"></ion-icon>
+        </button>
+
+        <button class="slider-btn next" aria-label="slide to next" data-next-btn>
+          <ion-icon name="chevron-forward"></ion-icon>
+        </button>
+
+      </section>
+
+
+      <!-- 
+        - #ABOUT
+      -->
+
+      <section class="section about text-center" aria-labelledby="about-label" id="about">
+        <div class="container">
+
+          <div class="about-content" style="margin-left:100px;">
+
+            <p class="label-2 section-subtitle" id="about-label">Home</p>
+
+            <p class="section-text">
+             At Crayonify, we believe that every child's creative potential deserves to flourish, regardless of their background. Our initiative is a vibrant tapestry woven with the colours of compassion, creativity, and community. We've set out on a mission to bridge the gap between unused crayons and the eager hands of underprivileged children in Mumbai.
+
+            </p>
+          </div>
+
+       
+        </div>
+      </section>
+
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
